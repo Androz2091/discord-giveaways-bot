@@ -1,4 +1,5 @@
 {
     "token": "Your Discord Bot token",
-    "prefix": "g!"
+    "prefix": "g!",
+    "everyoneMention": true
 }

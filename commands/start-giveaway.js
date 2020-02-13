@@ -42,7 +42,26 @@ exports.run = async (client, message, args) => {
         // The giveaway prize
         prize: giveawayPrize,
         // The giveaway winner count
-        winnerCount: giveawayNumberWinners
+        winnerCount: giveawayNumberWinners,
+        // Messages
+        messages: {
+            giveaway: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
+            giveawayEnded: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY ENDED** 🎉🎉",
+            timeRemaining: "Time remaining: **{duration}**!",
+            inviteToParticipate: "React with 🎉 to participate!",
+            winMessage: "Congratulations, {winners}! You won **{prize}**!",
+            embedFooter: "Giveaways",
+            noWinner: "Giveaway cancelled, no valid participations.",
+            winners: "winner(s)",
+            endedAt: "Ended at",
+            units: {
+                seconds: "seconds",
+                minutes: "minutes",
+                hours: "hours",
+                days: "days",
+                pluralS: false // Not needed, because units end with a S so it will automatically removed if the unit value is lower than 2
+            }
+        }
     });
 
     message.channel.send(`Giveaway started in ${giveawayChannel}!`);
