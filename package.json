@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Androz2091/giveaways-bot#readme",
   "dependencies": {
-    "discord-giveaways": "^3.0.4",
+    "discord-giveaways": "^3.2.0",
     "discord.js": "^11.5.1",
     "ms": "^2.1.2"
   }

@@ -43,6 +43,8 @@ exports.run = async (client, message, args) => {
         prize: giveawayPrize,
         // The giveaway winner count
         winnerCount: giveawayNumberWinners,
+        // Who hosts this giveaway
+        hostedBy: client.config.hostedBy ? message.author : null,
         // Messages
         messages: {
             giveaway: (client.config.everyoneMention ? "@everyone\n\n" : "")+"🎉🎉 **GIVEAWAY** 🎉🎉",
@@ -52,6 +54,7 @@ exports.run = async (client, message, args) => {
             winMessage: "Congratulations, {winners}! You won **{prize}**!",
             embedFooter: "Giveaways",
             noWinner: "Giveaway cancelled, no valid participations.",
+            hostedBy: "Hosted by: {user}",
             winners: "winner(s)",
             endedAt: "Ended at",
             units: {
