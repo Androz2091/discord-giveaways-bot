@@ -23,7 +23,8 @@ git clone https://github.com/Androz2091/giveaways-bot
 {
     "token": "Your discord bot token",
     "prefix": "g!",
-    "everyoneMention": true
+    "everyoneMention": true,
+    "hostedBy": true
 }
 ```
 
