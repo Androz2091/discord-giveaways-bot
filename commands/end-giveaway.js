@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
 
     // If no giveaway was found
     if(!giveaway){
-        return message.channel('Unable to find a giveaway for `'+args.join(' ')+'`');
+        return message.channel.send('Unable to find a giveaway for `'+ args.join(' ') + '`.');
     }
 
     // Edit the giveaway
