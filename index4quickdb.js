@@ -6,7 +6,7 @@ const client = new Discord.Client();
 const config = require('./config.json');
 client.config = config;
 
-const { GiveawaysManager } = require("../discord-giveaways");
+const { GiveawaysManager } = require("discord-giveaways");
 const db = require("quick.db");
 if(!db.get("giveaways")) db.set("giveaways", []);
 
