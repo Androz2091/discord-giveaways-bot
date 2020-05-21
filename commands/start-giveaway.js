@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
     // Number of winners
     let giveawayNumberWinners = args[2];
     // If the specified number of winners is not a number
-    if(isNaN(giveawayNumberWinners)){
+    if(isNaN(giveawayNumberWinners) || (parseInt(giveawayNumberWinners) <= 0)){
         return message.channel.send(':x: You have to specify a valid number of winners!');
     }
 
