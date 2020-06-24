@@ -19,6 +19,14 @@ client.giveawaysManager = new GiveawaysManager(client, {
 });
 // We now have a client.giveawaysManager property to manage our giveaways!
 
+client.giveawaysManager.on("giveawayReactionAdded", (giveaway, member, reaction) => {
+    console.log(`${member.user.tag} entered giveaway #${giveaway.messageID} (${reaction.emoji.name})`);
+});
+
+client.giveawaysManager.on("giveawayReactionRemoved", (giveaway, member, reaction) => {
+    console.log(`${member.user.tag} unreact to giveaway #${giveaway.messageID} (${reaction.emoji.name})`);
+});
+
 /* Load all events */
 fs.readdir("./events/", (_err, files) => {
     files.forEach((file) => {
