@@ -37,3 +37,5 @@ npm install
 ```sh
 node index.js
 ```
+
+Bot Testing
