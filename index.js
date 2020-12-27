@@ -27,6 +27,10 @@ client.giveawaysManager.on("giveawayReactionRemoved", (giveaway, member, reactio
     console.log(`${member.user.tag} unreact to giveaway #${giveaway.messageID} (${reaction.emoji.name})`);
 });
 
+client.giveawaysManager.on("giveawayEnded", (giveaway, winners) => {
+    console.log(`Giveaway #${giveaway.messageID} ended! Winners: ${winners.map((member) => member.user.username).join(', ')}`);
+});
+
 /* Load all events */
 fs.readdir("./events/", (_err, files) => {
     files.forEach((file) => {
