@@ -45,10 +45,10 @@ delayed-stream@~1.0.0:
   resolved "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-discord-giveaways@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmjs.org/discord-giveaways/-/discord-giveaways-4.4.0.tgz#6a3227c0202b4272235a70255624a4c736b79544"
-  integrity sha512-tcQFzCrA3ywdsjSW004TNm26LxLL4WVQhgvZuvFeYIFuyvD+OUqjYEvL0h0ie11YnjiFHHsyPOngbHv8hip3vA==
+discord-giveaways@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.npmjs.org/discord-giveaways/-/discord-giveaways-4.4.2.tgz#0e33a26b7ff79d94fc0c90b664327eaa6164e1b6"
+  integrity sha512-xjHe/J+mewxmhEG13NMO8EfnD5BCSTVbTE/cavGeLm8jRQloL0C0eWwPdZPll/89J/Om5+vFrWoxcv/a0Cl9gw==
   dependencies:
     deepmerge "^4.2.2"
 
