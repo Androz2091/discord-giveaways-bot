@@ -1,6 +1,15 @@
 const ms = require('ms');
 
 exports.run = async (client, message, args) => {
+    
+            let noabuse = 
+// Search with giveaway prize
+client.giveawaysManager.giveaways.find((g) => g.guildID === message.guild.id && g.prize === args.join(' ')) ||
+// Search with messageID
+client.giveawaysManager.giveaways.find((g) => g.guildID === message.guild.id && g.messageID === args[0]);
+
+// If no giveaway was found
+if (!noabuse) return message.channel.send('Unable to find a giveaway for `'+ args.join(' ') +'`.');
 
     // If the member doesn't have enough permissions
     if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
