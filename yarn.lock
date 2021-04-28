@@ -45,12 +45,13 @@ delayed-stream@~1.0.0:
   resolved "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
-discord-giveaways@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.npmjs.org/discord-giveaways/-/discord-giveaways-4.4.2.tgz#0e33a26b7ff79d94fc0c90b664327eaa6164e1b6"
-  integrity sha512-xjHe/J+mewxmhEG13NMO8EfnD5BCSTVbTE/cavGeLm8jRQloL0C0eWwPdZPll/89J/Om5+vFrWoxcv/a0Cl9gw==
+discord-giveaways@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.npmjs.org/discord-giveaways/-/discord-giveaways-4.5.0.tgz#e53aca6bd0ef084e4f339f4770e545e73b76ff10"
+  integrity sha512-Z6hP2fnYJ/RIbn1SVFXWkhUt+veQP1QL8/Jws80DxcbrdIl2y/BUU+AzLMTWnsADZjgMAnjP3e98KRTi19GBRg==
   dependencies:
     deepmerge "^4.2.2"
+    serialize-javascript "^5.0.1"
 
 discord.js@^12.5.1:
   version "12.5.1"
@@ -97,6 +98,25 @@ prism-media@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/prism-media/-/prism-media-1.2.3.tgz#37bbb11726674a73fe56a2df4de76aa91d2141b7"
   integrity sha512-fSrR66n0l6roW9Rx4rSLMyTPTjRTiXy5RVqDOurACQ6si1rKHHKDU5gwBJoCsIV0R3o9gi+K50akl/qyw1C74A==
+
+randombytes@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
+  integrity sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+  dependencies:
+    safe-buffer "^5.1.0"
+
+safe-buffer@^5.1.0:
+  version "5.2.1"
+  resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
+  integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
+
+serialize-javascript@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-5.0.1.tgz#7886ec848049a462467a97d3d918ebb2aaf934f4"
+  integrity sha512-SaaNal9imEO737H2c05Og0/8LUXG7EnsZyMa8MzkmuHoELfT6txuj0cMqRj6zfPKnmQ1yasR4PCJc8x+M4JSPA==
+  dependencies:
+    randombytes "^2.1.0"
 
 setimmediate@^1.0.5:
   version "1.0.5"
