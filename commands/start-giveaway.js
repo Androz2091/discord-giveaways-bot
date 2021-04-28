@@ -42,7 +42,7 @@ exports.run = async (client, message, args) => {
         // The giveaway prize
         prize: giveawayPrize,
         // The giveaway winner count
-        winnerCount: giveawayNumberWinners,
+        winnerCount: parseInt(giveawayNumberWinners),
         // Who hosts this giveaway
         hostedBy: client.config.hostedBy ? message.author : null,
         // Messages
