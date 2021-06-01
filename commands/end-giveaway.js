@@ -15,9 +15,9 @@ exports.run = async (client, message, args) => {
     // try to found the giveaway with prize then with ID
     let giveaway = 
     // Search with giveaway prize
-    client.giveawaysManager.giveaways.find((g) => g.prize === args.join(' ')) ||
+    client.giveawaysManager.giveaways.find((g) => g.prize === args.join(' ') && g.guildID === message.guild.id) ||
     // Search with giveaway ID
-    client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
+    client.giveawaysManager.giveaways.find((g) => g.messageID === args[0] && g.guildID === message.guild.id);
 
     // If no giveaway was found
     if(!giveaway){
