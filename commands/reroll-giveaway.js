@@ -28,12 +28,12 @@ module.exports = {
             // Search with giveaway prize
             client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === message.guild.id) ||
             // Search with giveaway ID
-            client.giveawaysManager.giveaways.find((g) => g.messageID === query && g.guildId === message.guild.id);
+            client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === message.guild.id);
 
         // If no giveaway was found
         if (!giveaway) {
             return interaction.reply({
-                content: 'Unable to find a giveaway for `'+ args.join(' ') +'`.',
+                content: 'Unable to find a giveaway for `'+ query +'`.',
                 ephemeral: true
             });
         }

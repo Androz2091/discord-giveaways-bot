@@ -30,7 +30,7 @@ module.exports = {
             // Search with giveaway prize
             client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === interaction.guild.id) ||
             // Search with giveaway ID
-            client.giveawaysManager.giveaways.find((g) => g.messageID === query && g.guildId === interaction.guild.id);
+            client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === interaction.guild.id);
 
         // If no giveaway was found
         if (!giveaway) {
