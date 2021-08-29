@@ -18,7 +18,7 @@ module.exports = {
         // If the member doesn't have enough permissions
         if(!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")){
             return interaction.reply({
-                content: ':x: You need to have the manage messages permissions to reroll giveaways.',
+                content: ':x: You need to have the manage messages permissions to end giveaways.',
                 ephemeral: true
             });
         }
@@ -40,6 +40,13 @@ module.exports = {
             });
         }
 
+        if (giveaway.ended) {
+            return interaction.reply({
+                content: 'This giveaway is already ended.',
+                ephemeral: true
+            });
+        }
+
         // Edit the giveaway
         client.giveawaysManager.end(giveaway.messageId)
         // Success message
@@ -48,17 +55,10 @@ module.exports = {
             interaction.reply('Giveaway ended!');
         })
         .catch((e) => {
-            if(e.startsWith(`Giveaway with message ID ${giveaway.messageId} is already ended.`)){
-                interaction.reply({
-                    content: 'This giveaway is already ended!',
-                    ephemeral: true
-                });
-            } else {
-                interaction.reply({
-                    content: e,
-                    ephemeral: true
-                });
-            }
+            interaction.reply({
+                content: e,
+                ephemeral: true
+            });
         });
 
     }
