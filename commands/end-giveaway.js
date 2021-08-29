@@ -35,30 +35,27 @@ module.exports = {
         // If no giveaway was found
         if (!giveaway) {
             return interaction.reply({
-                content: 'Unable to find a giveaway for `'+ args.join(' ') + '`.',
+                content: 'Unable to find a giveaway for `'+ query + '`.',
                 ephemeral: true
             });
         }
 
         // Edit the giveaway
-        client.giveawaysManager.edit(giveaway.messageID, {
-            setEndTimestamp: Date.now()
-        })
+        client.giveawaysManager.end(giveaway.messageId)
         // Success message
         .then(() => {
             // Success message
-            interaction.reply('Giveaway will end in less than '+(client.giveawaysManager.options.updateCountdownEvery/1000)+' seconds...');
+            interaction.reply('Giveaway ended!');
         })
         .catch((e) => {
-            if(e.startsWith(`Giveaway with message ID ${giveaway.messageID} is already ended.`)){
+            if(e.startsWith(`Giveaway with message ID ${giveaway.messageId} is already ended.`)){
                 interaction.reply({
                     content: 'This giveaway is already ended!',
                     ephemeral: true
                 });
             } else {
-                console.error(e);
                 interaction.reply({
-                    content: 'An error occured...',
+                    content: e,
                     ephemeral: true
                 });
             }
