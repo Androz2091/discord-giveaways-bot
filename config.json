@@ -1,6 +1,7 @@
 {
-    "token": "Your Discord Bot token",
+    "token": "ODgxNDY2MTMyOTQxMzgxNjYy.YStPTg.D1OGBrxYoHz90OoEU3xRUfqtet8",
     "prefix": "g!",
     "everyoneMention": true,
-    "hostedBy": true
+    "hostedBy": true,
+    "guildId": "558328638911545423"
 }
