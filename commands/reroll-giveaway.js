@@ -38,6 +38,13 @@ module.exports = {
             });
         }
 
+        if (!giveaway.ended) {
+            return interaction.reply({
+                content: 'The giveaway is not ended yet.',
+                ephemeral: true
+            });
+        }
+
         // Reroll the giveaway
         client.giveawaysManager.reroll(giveaway.messageId)
         .then(() => {
@@ -45,12 +52,10 @@ module.exports = {
             interaction.reply('Giveaway rerolled!');
         })
         .catch((e) => {
-            if (e.startsWith(`Giveaway with message ID ${giveaway.messageId} is not ended.`)) {
-                interaction.reply('This giveaway is not ended!');
-            } else {
-                console.error(e);
-                interaction.reply('An error occured...');
-            }
+            interaction.reply({
+                content: e,
+                ephemeral: true
+            });
         });
 
     }
