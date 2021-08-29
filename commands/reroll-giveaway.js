@@ -26,9 +26,9 @@ module.exports = {
         // try to found the giveaway with prize then with ID
         const giveaway = 
             // Search with giveaway prize
-            client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === message.guild.id) ||
+            client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === interaction.guild.id) ||
             // Search with giveaway ID
-            client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === message.guild.id);
+            client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === interaction.guild.id);
 
         // If no giveaway was found
         if (!giveaway) {
