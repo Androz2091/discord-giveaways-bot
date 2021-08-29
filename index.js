@@ -18,9 +18,6 @@ const synchronizeSlashCommands = require('discord-sync-commands');
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./giveaways.json",
-    updateCountdownEvery: 5000,
-    hasGuildMembersIntent: false,
-    exemptPermissions: ['ADMINISTRATOR'],
     default: {
         botsCanWin: false,
         embedColor: "#FF0000",
