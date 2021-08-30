@@ -81,9 +81,10 @@ discord-api-types@^0.22.0:
   resolved "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.22.0.tgz#34dc57fe8e016e5eaac5e393646cd42a7e1ccc2a"
   integrity sha512-l8yD/2zRbZItUQpy7ZxBJwaLX/Bs2TGaCthRppk8Sw24LOIWg12t9JEreezPoYD0SQcC2htNNo27kYEpYW/Srg==
 
-discord-giveaways@Androz2091/discord-giveaways#develop:
+discord-giveaways@^5.0.0:
   version "5.0.0"
-  resolved "https://codeload.github.com/Androz2091/discord-giveaways/tar.gz/9a22441a613d672360ca4fd9d64ce02e7e13dedc"
+  resolved "https://registry.yarnpkg.com/discord-giveaways/-/discord-giveaways-5.0.0.tgz#211e33681926d6b15a7897d89731d36d2ef708bb"
+  integrity sha512-kbedM7xp3oFzvgB7Hvuk2RjvuGSH9/GuhXuvWoMSRQOuiXG4de7w4ZGoegTfDcSlGy7F5x1hVQo/6Y/nrGThaQ==
   dependencies:
     deepmerge "^4.2.2"
     discord.js "^13.1.0"
@@ -110,7 +111,7 @@ discord.js@^13.1.0:
     node-fetch "^2.6.1"
     ws "^7.5.1"
 
-"discord.js@github:discordjs/discord.js#refs/pull/6414/head":
+discord.js@discordjs/discord.js#refs/pull/6414/head:
   version "13.2.0-dev"
   resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/b2ef10fdd742aa08da3a33b2cf35f0f2350e915a"
   dependencies:
