@@ -1,6 +1,6 @@
 {
     "token": "",
-    "everyoneMention": true,
+    "everyoneMention": false,
     "hostedBy": true,
     "guildId": "558328638911545423"
 }
