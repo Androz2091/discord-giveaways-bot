@@ -3,9 +3,9 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client({
     intents: [
-        Discord.Intents.FLAGS.GUILDS,
-        Discord.Intents.FLAGS.GUILD_MEMBERS,
-        Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+        Discord.GatewayIntentBits.Guilds,
+        Discord.GatewayIntentBits.GuildMembers,
+        Discord.GatewayIntentBits.GuildMessageReactions
     ]
 });
 
@@ -25,7 +25,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
         lastChance: {
             enabled: true,
             content: '⚠️ **LAST CHANCE TO ENTER !** ⚠️',
-            threshold: 5000,
+            threshold: 10000,
             embedColor: '#FF0000'
         }
     }
