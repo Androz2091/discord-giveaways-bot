@@ -61,7 +61,7 @@ fs.readdir("./commands/", (_err, files) => {
         name: c.name,
         description: c.description,
         options: c.options,
-        type: 'CHAT_INPUT'
+        type: Discord.ApplicationCommandType.ChatInput
     })), {
         debug: true,
         guildId: config.guildId

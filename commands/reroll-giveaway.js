@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports = {
 
     description: 'Reroll a giveaway',
@@ -6,7 +8,7 @@ module.exports = {
         {
             name: 'giveaway',
             description: 'The giveaway to reroll (message ID or prize)',
-            type: 'STRING',
+            type: Discord.ApplicationCommandOptionType.String,
             required: true
         }
     ],

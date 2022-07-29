@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const ms = require('ms');
 const messages = require("../utils/messages");
 
@@ -9,25 +10,25 @@ module.exports = {
         {
             name: 'duration',
             description: 'How long the giveaway should last for. Example values: 1m, 1h, 1d',
-            type: 'STRING',
+            type: Discord.ApplicationCommandOptionType.String,
             required: true
         },
         {
             name: 'winners',
             description: 'How many winners the giveaway should have',
-            type: 'INTEGER',
+            type: Discord.ApplicationCommandOptionType.Integer,
             required: true
         },
         {
             name: 'prize',
             description: 'What the prize of the giveaway should be',
-            type: 'STRING',
+            type: Discord.ApplicationCommandOptionType.String,
             required: true
         },
         {
             name: 'channel',
             description: 'The channel to start the giveaway in',
-            type: 'CHANNEL',
+            type: Discord.ApplicationCommandOptionType.Channel,
             required: true
         }
     ],
@@ -47,7 +48,7 @@ module.exports = {
         const giveawayWinnerCount = interaction.options.getInteger('winners');
         const giveawayPrize = interaction.options.getString('prize');
         
-        if(!giveawayChannel.isText()) {
+        if(!giveawayChannel.isTextBased()) {
             return interaction.reply({
                 content: ':x: Selected channel is not text-based.',
                 ephemeral: true
