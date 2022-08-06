@@ -40,7 +40,7 @@ module.exports = {
         const giveawayWinnerCount = interaction.options.getInteger('winners');
         const giveawayPrize = interaction.options.getString('prize');
     
-        if(!giveawayChannel.isText()) {
+        if(!giveawayChannel.isTextBased()) {
             return interaction.reply({
                 content: ':x: Selected channel is not text-based.',
                 ephemeral: true
