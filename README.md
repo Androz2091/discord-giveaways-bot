@@ -12,11 +12,11 @@
 * `drop-giveaway` command
 
 <a href="https://zupimages.net/viewer.php?id=23/01/9b7r.png">
-    <img src="https://zupimages.net/up/23/01/9b7r.png" style="width: 85%"/>
+    <img src="https://zupimages.net/up/23/01/9b7r.png" style="width: 80%"/>
 </a>
 
 <a href="https://zupimages.net/viewer.php?id=23/01/fx0b.png">
-    <img src="https://zupimages.net/up/23/01/fx0b.png" style="width: 35%"/>
+    <img src="https://zupimages.net/up/23/01/fx0b.png" style="width: 30%"/>
 </a>
 
 ## Install
