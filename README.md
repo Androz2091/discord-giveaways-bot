@@ -1,15 +1,23 @@
 # Giveaways Bot
 
-🎁Giveways Bot using the [discord-giveaways](https://npmjs.com/discord-giveaways) package!
+🎁 Giveways Bot with slash commands using the [discord-giveaways](https://npmjs.com/discord-giveaways) package!
 
 ## Features
 
 * `start-giveaway` command
-* `reroll-giveaway` command
 * `end-giveaway` command
+* `reroll-giveaway` command
+* `pause-giveaway` command
+* `unpause-giveaway` command
+* `drop-giveaway` command
 
-<img src='./examples/start-cmd.png' style="width: 50%;"></img>
-<img src='./examples/giveaway.png' style="width: 50%;"></img>
+<a href="https://zupimages.net/viewer.php?id=23/01/9b7r.png">
+    <img src="https://zupimages.net/up/23/01/9b7r.png"/>
+</a>
+
+<a href="https://zupimages.net/viewer.php?id=23/01/fx0b.png">
+    <img src="https://zupimages.net/up/23/01/fx0b.png"/>
+</a>
 
 ## Install
 
